@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ffffff">
+    <title>Chemical Supplies</title>
+    <link rel="icon" href="assets/images/chemical.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    
+    <style>
+       
+
+        /* Media query for mobile screens */
+        @media (max-width: 768px) {
+            .toolbar {
+                display: flex;
+                justify-content: space-around;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                padding: 10px;
+                background-color: #fff;
+                border-top: 1px solid #ccc;
+            }
+
+            /* Ensure buttons have enough space and align properly */
+            .toolbar button {
+                flex: 1;
+                margin: 0 5px;
+                text-align: center;
+            }
+            .toolbar_desktop{
+                display: none;
+            }
+           
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light text-white main_navbar" >
+            <a  class="navbar-brand text-white" href="#"><img class="Chemical_Icon"  src="assets/gif/test-tube.gif" alt="Chemical Icon"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-white" href="#">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-white" href="#">Inventory</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" oninput="searchChemicals()">
+                </form>
+            </div>
+        </nav>
+        
+        
+      <div id="loader" class="loader" style="display: none;"></div>
+        <div class="boxmain sticky-top" style="background-color: #6f2cf5;color: rgb(247, 240, 228);">
+          <div class="headmain">
+                <div class="" style="border-radius: 5px;" >
+                  <h2 class="chemical_heading" >Chemical Supplies</h2>
+                </div>
+                <div class="toolbar_page">
+                    <!--  toolbar for desktop screen -->
+                  <div class="toolbar_desktop">
+                    <button id="addRow" class="btn btn-primary me-2" title="Add" onclick="addRow()"><i class="fas fa-plus"></i></button>
+                    <button id="deleteRow" class="btn btn-danger me-2" title="Delete" onclick="deleteRow()"><i class="fas fa-trash-alt"></i></button>
+                    <button id="moveDown" class="btn btn-secondary me-2" title="Move Down" onclick="moveRowDown()"><i class="fas fa-arrow-down"></i></button>
+                    <button id="moveUp" class="btn btn-secondary me-2" title="Move Up" onclick="moveRowUp()"><i class="fas fa-arrow-up"></i></button>
+                    <button id="refreshData" class="btn btn-warning me-2" title="Refresh" onclick="refreshTable()"><i class="fas fa-sync-alt"></i></button>
+                    <button id="saveData" class="disabled-btn btn btn-success" title="Save" ><i class="fas fa-save" disabled></i></button>
+                    <button id="chancelbtn" class="disabled-btn btn btn-danger" title="chancelbtn" ><i class="fas fas fa-times" disabled></i></button>
+                    <button id="Export" class="btn btn-success" title="Export" onclick="ExportData()"><i class="fas fa-file-export"></i></button>
+                </div>
+                </div>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+            <table id="chemicalTable" class="table table-bordered ">
+                <thead class="thead-light">
+                    <tr>
+                        <th onclick="sortTable(0)">ID</th>
+                        <th onclick="sortTable(1)">Chemical Name</th>
+                        <th onclick="sortTable(2)">Vendor</th>
+                        <th onclick="sortTable(3)">Density (g/m³)</th>
+                        <th onclick="sortTable(4)">Viscosity (m²/s)</th>
+                        <th onclick="sortTable(5)">Packaging</th>
+                        <th onclick="sortTable(6)">Pack Size</th>
+                        <th onclick="sortTable(7)">Unit</th>
+                        <th onclick="sortTable(8)">Quantity</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody" >
+                    <!-- Rows to be inserted Here -->
+                </tbody><tr></tr>
+                <tbody style="visibility: hidden;">
+                    <tr>
+                        <td>ID</td>
+                        <td>Chemical Name</td>
+                        <td>Vendor</td>
+                        <td>Density (g/m³)</td>
+                        <td>Viscosity (m²/s)</td>
+                        <td>Packaging</td>
+                        <td>Pack Size</td>
+                        <td>Unit</td>
+                        <td>Quantity</td>
+                        <td>Action</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!--  toolbar for mobile screen -->
+        <div class="toolbar sticky-bottom" style="background-color: #6f2cf5;margin-bottom: 0px;">
+            <button id="addRow" class="btn btn-secondary me-2" title="Add" onclick="addRow()"><i class="fas fa-plus"></i></button>
+            <button id="deleteRow" class="btn btn-danger me-2" title="Delete" onclick="deleteRow()"><i class="fas fa-trash-alt"></i></button>
+            <button id="moveDown" class="btn btn-primary me-2" title="Move Down" onclick="moveRowDown()"><i class="fas fa-arrow-down"></i></button>
+            <button id="moveUp" class="btn btn-primary me-2" title="Move Up" onclick="moveRowUp()"><i class="fas fa-arrow-up"></i></button>
+            <button id="refreshData" class="btn btn-warning me-2" title="Refresh" onclick="refreshTable()"><i class="fas fa-sync-alt"></i></button>
+            <button id="saveData2" class="disabled-btn btn btn-success" title="Save" ><i class="fas fa-save" disabled></i></button>
+            <button id="chancelbtn2" class="disabled-btn btn btn-danger" title="chancelbtn" ><i class="fas fas fa-times" disabled></i></button>
+            <button id="Export" class="btn btn-success" title="Export" onclick="ExportData()"><i class="fas fa-file-export"></i></button>
+        </div>
+    </div>
+
+    <!-- Local Bootstrap JS -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- main script file  -->
+    <script src="js/script.js"></script>
+    <!-- main script file  -->
+    <script src="js/xlsx.full.min.js"></script>
+  
+</body>
+</html>

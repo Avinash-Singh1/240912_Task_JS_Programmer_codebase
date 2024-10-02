@@ -1,0 +1,185 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+ /* General styling for the toolbar */
+ .toolbar {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+}
+
+/* Hide toolbar by default */
+.toolbar {
+    display: none;
+}
+
+.tableBox {
+    margin-top: 20px;
+}
+
+.toolitem {
+    margin: 0 5px;
+}
+
+.toolbar_page{
+    display: flex;
+}
+.toolbar_desktop{
+    margin-top: 2px;
+}
+.boxmain{
+    background-color: white;
+}
+
+.editable-input {
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.editable-input:focus {
+    border-color: #80bdff;
+    outline: none;
+}
+.headmain{
+    display: flex;
+    justify-content:space-between ;
+    padding: 0px 44px;
+}
+
+
+
+/* navbar cs  */
+.main_navbar{
+    background-color: #6f2cf5;
+}
+.Chemical_Icon{
+   width: 40px; 
+   height: auto;
+   border-radius: 4px;
+}
+
+
+/* loder cass  */
+.loader {
+    border: 8px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 8px solid #3498db;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+    z-index: 1000;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* loder css end  */
+
+
+/* css for save and cross button */
+.lastd{
+    display: flex;
+   gap: 2px;
+}
+.selected-row {
+    background-color: #d3e0ff; 
+    color: #333; 
+}
+
+.table-row{
+    cursor: pointer;
+}
+
+.custom-bg-dark {
+    background-color: #1C1C1C !important; 
+}
+/* Class to apply blur effect */
+.blur-background {
+    filter: blur(5px); 
+    transition: filter 0.3s ease-in-out; 
+}
+
+/* Style for the buttons  'disabled' */
+.disabled-btn {
+    background-color: #d3d3d3; 
+    color: #6c757d;  
+    cursor: not-allowed;  
+    opacity: 0.7; 
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .toolitem {
+        font-size: 1.5em;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 5px;
+    }
+    .headmain{
+        
+        padding: 0px 4px;
+    }
+ 
+
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2em;
+    }
+
+    th, td {
+        font-size: 1.1em;
+    }
+    .headmain{
+        display: flex;
+        flex-direction: column;
+        /* background-color: #3498db; */
+    }
+    #pagination{
+        display: flex;
+        justify-content: space-around;
+        /* margin: 4px 0px 4px 0px; */
+    }
+    .toolbar{
+        display: flex;
+        justify-content: space-around;
+    }
+    .chemical_heading{
+        text-align: center;
+        /* background-color: #3498db; */
+    }
+    .toolbar{
+        margin: 10px 0px 10px 0px;
+    }
+
+    .toolbar_page{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+}
