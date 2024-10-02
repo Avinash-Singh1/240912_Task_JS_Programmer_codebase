@@ -2,5 +2,16 @@
     { "id": 1, "chemicalName": "Ammonium Persulfate", "vendor": "LG Chem", "density": 3525.92, "viscosity": 60.63, "packaging": "Bag", "packSize": 100, "unit": "kg", "quantity": 6495.18 },
     { "id": 2, "chemicalName": "Caustic Potash", "vendor": "Formosa", "density": 3172.15, "viscosity": 48.22, "packaging": "Bag", "packSize": 100, "unit": "kg", "quantity": 8751.90 },
     { "id": 3, "chemicalName": "Dimethylaminopropylamino", "vendor": "LG Chem", "density": 8435.37, "viscosity": 12.62, "packaging": "Barrel", "packSize": 75, "unit": "L", "quantity": 5964.61 },
-    { "id": 4, "chemicalName": "Mono Ammonium Phosphate", "vendor": "Sinopec", "density": 1597.65, "viscosity": 76.51, "packaging": "Bag", "packSize": 105, "unit": "kg", "quantity": 8183.73 }
+    { "id": 4, "chemicalName": "Mono Ammonium Phosphate", "vendor": "Sinopec", "density": 1597.65, "viscosity": 76.51, "packaging": "Bag", "packSize": 105, "unit": "kg", "quantity": 8183.73 },
+    { "id": 5, "chemicalName": "Ferric Nitrate", "vendor": "DowDuPont", "density": 364.04, "viscosity": 14.90, "packaging": "Bag", "packSize": 105, "unit": "kg", "quantity": 4154.33 },
+    { "id": 6, "chemicalName": "n-Pentane", "vendor": "Sinopec", "density": 4535.26, "viscosity": 66.76, "packaging": "N/A", "packSize": null, "unit": "t", "quantity": 6272.34 },
+    { "id": 7, "chemicalName": "Glycol Ether PM", "vendor": "LG Chem", "density": 6495.18, "viscosity": 72.12, "packaging": "Bag", "packSize": 250, "unit": "kg", "quantity": 8749.54 },
+    { "id": 8, "chemicalName": "Acetone", "vendor": "LG Chem", "density": 780.5, "viscosity": 45.25, "packaging": "Drum", "packSize": 200, "unit": "kg", "quantity": 5000.00 },
+    { "id": 9, "chemicalName": "Toluene", "vendor": "BASF", "density": 867.2, "viscosity": 30.45, "packaging": "Drum", "packSize": 150, "unit": "L", "quantity": 3243.32 },
+    { "id": 10, "chemicalName": "Methanol", "vendor": "Mitsui", "density": 792.3, "viscosity": 12.65, "packaging": "Canister", "packSize": 50, "unit": "L", "quantity": 2743.51 },
+    { "id": 11, "chemicalName": "Benzene", "vendor": "Sinopec", "density": 880.1, "viscosity": 24.12, "packaging": "Drum", "packSize": 200, "unit": "L", "quantity": 6532.18 },
+    { "id": 12, "chemicalName": "Ethyl Alcohol", "vendor": "LG Chem", "density": 789.5, "viscosity": 1.2, "packaging": "Barrel", "packSize": 55, "unit": "L", "quantity": 9999.00 },
+    { "id": 13, "chemicalName": "Sodium Hydroxide", "vendor": "Formosa", "density": 2134.9, "viscosity": 100.15, "packaging": "Bag", "packSize": 100, "unit": "kg", "quantity": 6543.23 },
+    { "id": 14, "chemicalName": "Hydrochloric Acid", "vendor": "DowDuPont", "density": 1192.1, "viscosity": 98.3, "packaging": "Barrel", "packSize": 50, "unit": "L", "quantity": 4352.22 },
+    { "id": 15, "chemicalName": "Sulfuric Acid", "vendor": "Sinopec", "density": 1840.2, "viscosity": 90.5, "packaging": "Bag", "packSize": 100, "unit": "kg", "quantity": 7234.15 }
 ]
