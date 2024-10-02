@@ -1,5 +1,15 @@
 # Chemical Management System (240912_Task_JS_Programmer)
 
+## . Screenshots
+
+![export](https://github.com/user-attachments/assets/77a1e552-bd7b-46ef-8ba2-cc24222bbc27)
+
+![main](https://github.com/user-attachments/assets/7203e462-9b5f-4ca4-87d6-c1dd082d6ef1)
+
+![export2](https://github.com/user-attachments/assets/b465155f-6e5f-4ed9-a3fa-abbbdb7f5363)
+
+![export1](https://github.com/user-attachments/assets/4076d7fa-47a7-4944-a2d7-9267c2f5e8cd)
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Overview](#project-overview)
@@ -92,13 +102,3 @@ The Chemical Management System offers a comprehensive solution for managing chem
 5. **CSV Export Functionality (cdnjs)**
    - **Source**: cdnjs Cloudflare
    - **Description**: CDN hosting of libraries like jQuery used to implement CSV export functionality.
-
-## 10. Screenshots
-
-![export](https://github.com/user-attachments/assets/77a1e552-bd7b-46ef-8ba2-cc24222bbc27)
-
-![main](https://github.com/user-attachments/assets/7203e462-9b5f-4ca4-87d6-c1dd082d6ef1)
-
-![export2](https://github.com/user-attachments/assets/b465155f-6e5f-4ed9-a3fa-abbbdb7f5363)
-
-![export1](https://github.com/user-attachments/assets/4076d7fa-47a7-4944-a2d7-9267c2f5e8cd)
