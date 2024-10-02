@@ -117,6 +117,22 @@ function makeRowEditable(index, rowElement) {
     chancelbtn2.onclick = () => cancelEdit(index, rowElement, originalRow);
     
   
+    //  Creating Save button with Bootstrap classes
+    const saveButton = document.createElement('button');
+    saveButton.innerHTML = '<i class="fas fa-save"></i> ';
+    saveButton.onclick = () => updateRow(index, rowElement);
+    saveButton.className = 'btn btn-success editbtn m-1'; // Bootstrap classes for button styling
+
+    // Creating Cancel button with Bootstrap classes
+    const cancelButto = document.createElement('button');
+    cancelButto.innerHTML = '<i class="fas fa-times"></i> ';
+    cancelButto.onclick = () => cancelEdit(index, rowElement, originalRow);
+    cancelButto.className = 'btn btn-danger editbtn m-1'; // Bootstrap classes for button styling
+
+    // Appending buttons to the new column
+    const actionCell = rowElement.querySelector('td:last-child'); // Select the last cell
+    actionCell.appendChild(saveButton);
+    actionCell.appendChild(cancelButto);
 }
 
 function selectRow(index) {
@@ -184,8 +200,7 @@ function cancelEdit(index, rowElement, originalRow) {
     const saveDatabtn =document.getElementById("saveData");
     const saveDatabtn2 =document.getElementById("saveData2");
     saveDatabtn.classList.add('disabled-btn');
-    saveDatabtn2.classList.add('disabled-btn');
-   
+    saveDatabtn2.classList.add('disabled-btn'); 
     
 }
 
