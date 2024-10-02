@@ -94,7 +94,8 @@ The Chemical Management System offers a comprehensive solution for managing chem
    - **Description**: CDN hosting of libraries like jQuery used to implement CSV export functionality.
 
 ## 10. Screenshots
-![Uploading main.jpg…]()
+
+![main](https://github.com/user-attachments/assets/7203e462-9b5f-4ca4-87d6-c1dd082d6ef1)
 
 ![export2](https://github.com/user-attachments/assets/b465155f-6e5f-4ed9-a3fa-abbbdb7f5363)
 
