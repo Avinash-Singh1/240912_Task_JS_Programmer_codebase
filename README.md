@@ -1,6 +1,6 @@
 # Chemical Management System (240912_Task_JS_Programmer)
 
-## . Screenshots
+## . View Demo: https://chemicals-supplies.netlify.app/
 
 ![export](https://github.com/user-attachments/assets/77a1e552-bd7b-46ef-8ba2-cc24222bbc27)
 
